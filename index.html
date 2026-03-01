@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="todomain">
+        <!-- Contenedor principal -->
+        <h1>Lista De Tareas Para Hacer</h1>
+        <form id="todo-form">
+            <!-- Formulario -->
+            <input type="text" id="todo-input" placeholder="Escribe una nueva tarea para hacer" required>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <div class="filters">
+            <!-- Sección de filtros -->
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendientes</button>
+            <button class="filter-btn" data-filter="completed">Completadas</button>
+            
+        </div>
+
+        <ol id="todo-list"></ol>
+
+        <div class="footer">
+            <span id="item-count">0 tareas pendientes</span>
+            <!-- Muestra el número de tareas pendientes -->
+            <button id="clear-completed">Limpiar completadas</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

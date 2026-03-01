@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    background: #92beff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.todomain {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+ol {
+    list-style: decimal;
+    padding-left: 30px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: task-counter;
+    padding-left: 0;
+}
+
+li {
+    counter-increment: task-counter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 30px;
+}
+
+li::before {
+    content: counter(task-counter) ".";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.filters {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.filter-btn.active {
+    background: #07eb2d;
+    color: rgb(26, 47, 236);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
